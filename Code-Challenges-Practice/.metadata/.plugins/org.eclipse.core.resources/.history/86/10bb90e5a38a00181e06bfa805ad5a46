@@ -1,0 +1,52 @@
+package com.revature.StagingTestingApp.Controllers;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.revature.StagingTestingApp.Models.Employee;
+import com.revature.StagingTestingApp.Repositories.EmployeeRepository;
+
+@RestController
+//@RequestMapping("/employees")
+@CrossOrigin
+public class EmployeeController {
+	
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	@Autowired
+	EmployeeRepository repo;
+	
+	@GetMapping("/employees")
+	public List<Employee> retrieveAllEmployees(){
+		
+		logger.info("{}", Employee.class);
+		
+		return repo.findAll();
+	}
+	
+//	@GetMapping("/employees/{id}")
+//	public Optional<Employee> retrieveById(@PathVariable Long id) {		
+//		
+//		return repo.findById(id);
+//	}
+	
+	@GetMapping("/employees/{id}")
+	public Employee retrieveById(@PathVariable Long id) {		
+		
+		Employee response = new Employee();
+		
+		repo.findById(id);
+		
+		return new Employee(response.getEmail(), response.getName());
+	}
+	
+}

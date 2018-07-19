@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;ans&apos; in &apos;com.revature.Challenges.HashMapRansomNote.main(...)&apos; to &apos;answer&apos;&#x0D;&#x0A;- Original project: &apos;CodeChallengeTesting&apos;&#x0D;&#x0A;- Original element: &apos;com.revature.Challenges.HashMapRansomNote.main(String[]).ans&apos;&#x0D;&#x0A;- Renamed element: &apos;ans&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;ans&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java&lt;com.revature.Challenges{HashMapRansomNote.java[HashMapRansomNote~main~\[QString;@ans!1071!1089!1078!1080!QString;!0!false" name="answer" references="true" stamp="1531337952854" version="1.0"/>
+</session>

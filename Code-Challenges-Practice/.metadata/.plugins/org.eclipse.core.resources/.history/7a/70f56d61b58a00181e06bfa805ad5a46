@@ -1,0 +1,5 @@
+package com.revature.RestSample;
+
+public class Greeting {
+
+}

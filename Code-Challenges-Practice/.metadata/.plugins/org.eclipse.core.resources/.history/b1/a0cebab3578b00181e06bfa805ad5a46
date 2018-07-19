@@ -1,0 +1,9 @@
+package com.revature.restfulwebservices;
+
+public class HelloWorldController {
+	
+	//GET
+	//URI - /hello-world
+	//method - "Hello World"
+
+}
